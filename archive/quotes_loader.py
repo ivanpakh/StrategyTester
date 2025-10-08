@@ -3,7 +3,7 @@ import pandas as pd
 import chardet
 from pathlib import Path
 
-DATA_FOLDER = Path("quotes_data")  # папка с CSV
+DATA_FOLDER = Path("../quotes_data")  # папка с CSV
 
 
 def load_quotes(symbol: str, timeframe: str) -> pd.DataFrame:
