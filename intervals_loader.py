@@ -40,7 +40,7 @@ def load_intervals_csv(path):
     df = df.rename(columns=mapping)
     # parse datetimes
     for dtcol in ['date1','date2','openDate1','openDate2','closeDate1','closeDate2']:
-        df[dtcol] = pd.to_datetime(df[dtcol], infer_datetime_format=True, errors='coerce')
+        df[dtcol] = pd.to_datetime(df[dtcol], errors='coerce')
 
     for pcol in ['price1','price2']:
         df[pcol] = pd.to_numeric(df[pcol].astype(str).str.replace(',','.'), errors='coerce')

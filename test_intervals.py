@@ -1,7 +1,7 @@
 import os
 print("Текущая рабочая директория:", os.getcwd())
 
-from tintervals_loader import load_approved_intervals
+from Tintervals_loader import load_approved_intervals
 
 approved_longs, approved_shorts = load_approved_intervals(
     "ApprovedTrades/ApprovedLongs.csv",

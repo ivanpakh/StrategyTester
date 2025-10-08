@@ -34,7 +34,7 @@ def load_quotes_csv_to_numpy(csv_path, time_col='time', time_format=None):
         raise ValueError("No 'time' column found in CSV")
 
     # Parse datetime
-    df['time'] = pd.to_datetime(df['time'], infer_datetime_format=True, errors='coerce')
+    df['time'] = pd.to_datetime(df['time'], errors='coerce')
     # Ensure numeric price columns
     for col in ['open', 'high', 'low', 'close']:
         if col not in df.columns:

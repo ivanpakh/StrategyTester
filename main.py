@@ -7,8 +7,8 @@ from tester_hybrid import evaluate_strategy
 # Параметры — подстрой под свои пути
 M1_file = "quotes_data/XAUUSD_M1_2016-01-01_to_2025-10-01.csv"
 TF_file = "quotes_data/XAUUSD_M5_2016-01-01_to_2025-10-01.csv"
-approved_shorts_csv = "data/ApprovedShorts.csv"
-approved_longs_csv = "data/ApprovedLongs.csv"
+approved_shorts_csv = "ApprovedTrades/ApprovedShorts.csv"
+approved_longs_csv = "ApprovedTrades/ApprovedLongs.csv"
 
 # 1) Загружаем котировки M1 (для всех вычислений по ценам)
 quotes_m1 = load_quotes_csv_to_numpy(M1_file)
