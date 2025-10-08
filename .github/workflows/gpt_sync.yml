@@ -1,0 +1,26 @@
+name: GPT Sync
+
+# Запуск при каждом пуше в main
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-code:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Клонируем репозиторий
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # 2. Демонстрационный шаг: проверка токена
+      - name: Check token
+        run: echo "GPT token is set"
+        env:
+          GPT_ACCESS_TOKEN: ${{ secrets.GPT_ACCESS_TOKEN }}
+
+      # 3. Здесь можно запускать скрипт, который будет взаимодействовать с GPT
+      # - name: Run GPT updater
+      #   run: python scripts/gpt_updater.py
+      #   env:
+      #     GPT_ACCESS_TOKEN: ${{ secrets.GPT_ACCESS_TOKEN }}
